@@ -32,8 +32,6 @@ class SmallLiftTest extends TestCase
         $this->assertSame(2, $person2->getCurrentFloor());
         $this->assertSame(2, $person3->getCurrentFloor());
 
-        $this->assertLessThanOrEqual(1, $lift->getNumberOfVisits(0));
-        $this->assertLessThanOrEqual(2, $lift->getNumberOfVisits(1));
-        $this->assertLessThanOrEqual(2, $lift->getNumberOfVisits(2));
+        $this->assertLessThanOrEqual(5, $lift->getTotalNumberOfVisits());
     }
 }
