@@ -41,6 +41,14 @@ $lift = new SimpleLift();
 $lift->movePeople($people);
 ```
 
-You just need to fill in the method body.  You can move the lift to a floor by using `$this->moveTo($floor)`, and get someone to enter/exit the lift by using `$person->enter($this)` and `$person->exitLift()` respectively.
+You just need to fill in the method body.  You can move the lift to a floor by using `$this->moveTo($floor)`, and get someone to enter/exit the lift by using `$this->addPassenger($person)` and `$this->removePassenger($person)` respectively.
 
 You can remove `$this->markTestIncomplete()` from `SimpleLiftTest`, which will let you test your solution.  Feel free to add tests of your own!
+
+## Goal #2
+
+The new lift is working out great, but the landlord isn't happy about the amount of power we're using.  Can we improve our lift algorithm so that we only visit each floor a maximum of 2 times?
+
+Fill out the `movePeople` method of `EfficientLift` this time.
+
+You can remove `$this->markTestIncomplete()` from `EfficientLiftTest` to test your solution.  Again, feel free to add tests of your own!
