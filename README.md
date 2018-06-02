@@ -52,3 +52,18 @@ The new lift is working out great, but the landlord isn't happy about the amount
 Fill out the `movePeople` method of `EfficientLift` this time.
 
 You can remove `$this->markTestIncomplete()` from `EfficientLiftTest` to test your solution.  Again, feel free to add tests of your own!
+
+## Goal #3
+
+As the company is growing, we can't all fit in the lift at once.  We're going to have to take into account the number of people the lift can hold.
+
+The `SmallLift` class takes the maximum number of people as a constructor argument:
+
+```php
+$lift = new SmallLift(4);
+$lift->movePeople($people);
+```
+
+Can you come up with a new `movePeople` method that takes the maximum capacity into account?
+
+You can get the total number of visits using the `getTotalNumberOfVisits` method - how small can you make this?
