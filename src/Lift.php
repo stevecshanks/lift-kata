@@ -30,4 +30,9 @@ abstract class Lift
     {
         $this->currentFloor = $currentFloor;
     }
+
+    /**
+     * @param Person[] $people
+     */
+    abstract public function movePeople(array $people);
 }
