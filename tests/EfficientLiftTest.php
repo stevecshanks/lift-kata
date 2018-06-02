@@ -24,7 +24,7 @@ class EfficientLiftTest extends TestCase
         $this->assertSame(0, $person3->getCurrentFloor());
 
         foreach ([0, 1, 2] as $floor) {
-            $this->assertTrue($lift->getNumberOfVisits($floor) <= 2);
+            $this->assertLessThanOrEqual(2, $lift->getNumberOfVisits($floor));
         }
     }
 }
