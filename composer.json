@@ -2,6 +2,9 @@
     "autoload": {
         "psr-4": {"PODKata\\": "src/"}
     },
+    "autoload-dev": {
+        "psr-4": {"PODKata\\Tests\\": "tests/"}
+    },
     "require-dev": {
         "phpunit/phpunit": "4.*"
     }

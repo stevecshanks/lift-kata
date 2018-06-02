@@ -66,4 +66,4 @@ $lift->movePeople($people);
 
 Can you come up with a new `movePeople` method that takes the maximum capacity into account?
 
-You can get the total number of visits using the `getTotalNumberOfVisits` method - how small can you make this?
+You can get the total number of visits using the `getTotalNumberOfVisits` method.  `SmallLiftTest` has a few examples - how small can you get the total number of visits?

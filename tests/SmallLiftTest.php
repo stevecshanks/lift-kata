@@ -9,6 +9,8 @@ use PODKata\SmallLift;
 
 class SmallLiftTest extends TestCase
 {
+    use LiftAssertionsTrait;
+
     public function testLiftCannotExceedCapacity()
     {
         $this->setExpectedException(LogicException::class);
@@ -21,16 +23,16 @@ class SmallLiftTest extends TestCase
     {
         $this->markTestIncomplete(); // TODO remove this line!
 
-        $person1 = new Person(0, 1);
-        $person2 = new Person(1, 2);
-        $person3 = new Person(1, 2);
+        $people = [
+            new Person(0, 1),
+            new Person(1, 2),
+            new Person(1, 2),
+        ];
 
         $lift = new SmallLift(1);
-        $lift->movePeople([$person1, $person2, $person3]);
+        $lift->movePeople($people);
 
-        $this->assertSame(1, $person1->getCurrentFloor());
-        $this->assertSame(2, $person2->getCurrentFloor());
-        $this->assertSame(2, $person3->getCurrentFloor());
+        $this->assertPeopleHaveArrivedAtTheirDestinations($people);
 
         $this->assertLessThanOrEqual(5, $lift->getTotalNumberOfVisits());
     }
