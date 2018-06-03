@@ -9,7 +9,7 @@ use PODKata\SmallLift;
 
 class SmallLiftTest extends TestCase
 {
-    use LiftAssertionsTrait;
+    use LiftAssertions;
 
     public function testLiftCannotExceedCapacity()
     {

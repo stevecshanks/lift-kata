@@ -4,7 +4,7 @@ namespace PODKata\Tests;
 
 use PODKata\Person;
 
-trait LiftAssertionsTrait
+trait LiftAssertions
 {
     /**
      * @param Person[] $people

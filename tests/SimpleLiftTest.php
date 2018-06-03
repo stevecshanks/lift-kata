@@ -8,7 +8,7 @@ use PODKata\SimpleLift;
 
 class SimpleLiftTest extends TestCase
 {
-    use LiftAssertionsTrait;
+    use LiftAssertions;
 
     public function testPeopleAreTakenToTheirDestination()
     {

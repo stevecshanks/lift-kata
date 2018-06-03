@@ -8,7 +8,7 @@ use PODKata\Person;
 
 class EfficientLiftTest extends TestCase
 {
-    use LiftAssertionsTrait;
+    use LiftAssertions;
 
     public function testPeopleAreTakenToTheirDestinationEfficiently()
     {
