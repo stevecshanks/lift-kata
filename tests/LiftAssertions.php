@@ -16,7 +16,8 @@ trait LiftAssertions
                 $person->getDestination(),
                 $person->getCurrentFloor(),
                 sprintf(
-                    'Expected person to be on floor %d but they are actually on floor %d',
+                    'Expected %s to be on floor %d but they are actually on floor %d',
+                    $person->getName(),
                     $person->getDestination(),
                     $person->getCurrentFloor()
                 )

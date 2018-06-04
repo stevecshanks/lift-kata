@@ -4,6 +4,8 @@ namespace PODKata;
 
 class Person
 {
+    /** @var string */
+    private $name;
     /** @var int */
     private $currentFloor;
     /** @var int */
@@ -11,13 +13,23 @@ class Person
 
     /**
      * Person constructor.
+     * @param string $name
      * @param int $currentFloor
      * @param int $destination
      */
-    public function __construct($currentFloor, $destination)
+    public function __construct($name, $currentFloor, $destination)
     {
+        $this->name = $name;
         $this->currentFloor = $currentFloor;
         $this->destination = $destination;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**

@@ -20,16 +20,16 @@ At the very least, we need a lift that will pick up anyone waiting and take them
 
 ```php
 $people = [
-    new Person(0, 1),
-    new Person(1, 2),
-    new Person(1, 2),
+    new Person('Humberto', 0, 1),
+    new Person('Randy', 1, 2),
+    new Person('Dena', 1, 2),
 ];
 ```
 
 In this example we have:
 
-- 1 person waiting on Floor 0, wanting to go to Floor 1
-- 2 people waiting on Floor 1 who want to go to Floor 2
+- Humberto waiting on Floor 0, wanting to go to Floor 1
+- Randy and Dena waiting on Floor 1, who both want to go to Floor 2
 - no-one waiting on Floor 2
 
 The lift starts on Floor 0, and you can assume it's big enough to carry everyone at once.

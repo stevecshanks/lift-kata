@@ -15,9 +15,9 @@ class SimpleLiftTest extends TestCase
         $this->markTestIncomplete(); // TODO remove this line!
 
         $people = [
-            new Person(0, 1),
-            new Person(1, 2),
-            new Person(2, 0),
+            new Person('Chaz', 0, 1),
+            new Person('Sallie', 1, 2),
+            new Person('Rowena', 2, 0),
         ];
 
         $lift = new SimpleLift();

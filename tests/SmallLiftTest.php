@@ -16,7 +16,7 @@ class SmallLiftTest extends TestCase
         $this->setExpectedException(LogicException::class);
 
         $lift = new SmallLift(0);
-        $lift->addPassenger(new Person(0, 0));
+        $lift->addPassenger(new Person('Test', 0, 0));
     }
 
     public function testPeopleAreTakenToTheirDestinationEfficientlyWithoutExceedingCapacity()
@@ -24,9 +24,9 @@ class SmallLiftTest extends TestCase
         $this->markTestIncomplete(); // TODO remove this line!
 
         $people = [
-            new Person(0, 1),
-            new Person(1, 2),
-            new Person(1, 2),
+            new Person('Robb', 0, 1),
+            new Person('Lyda', 1, 2),
+            new Person('Catharine', 1, 2),
         ];
 
         $lift = new SmallLift(1);
@@ -42,21 +42,21 @@ class SmallLiftTest extends TestCase
         $this->markTestIncomplete(); // TODO remove this line!
 
         $people = [
-            new Person(0, 6),
-            new Person(0, 2),
-            new Person(0, 2),
-            new Person(1, 3),
-            new Person(1, 5),
-            new Person(3, 4),
-            new Person(3, 5),
-            new Person(3, 6),
-            new Person(3, 7),
-            new Person(5, 2),
-            new Person(5, 2),
-            new Person(7, 1),
-            new Person(7, 0),
-            new Person(7, 2),
-            new Person(7, 6),
+            new Person('Damon', 0, 6),
+            new Person('Arden', 0, 2),
+            new Person('Joannie', 0, 2),
+            new Person('Alex', 1, 3),
+            new Person('Jany', 1, 5),
+            new Person('Eudora', 3, 4),
+            new Person('Dan', 3, 5),
+            new Person('Bernita', 3, 6),
+            new Person('Brice', 3, 7),
+            new Person('Jessyca', 5, 2),
+            new Person('Adrienne', 5, 2),
+            new Person('Grayson', 7, 1),
+            new Person('Rowan', 7, 0),
+            new Person('Kip', 7, 2),
+            new Person('Dolly', 7, 6),
         ];
 
         $lift = new SmallLift(3);
