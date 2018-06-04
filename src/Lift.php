@@ -69,6 +69,14 @@ abstract class Lift
     }
 
     /**
+     * @return Person[]
+     */
+    public function getPassengers()
+    {
+        return $this->passengers;
+    }
+
+    /**
      * @return int
      */
     public function getNumberOfPassengers()
