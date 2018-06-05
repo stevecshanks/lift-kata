@@ -22,7 +22,7 @@ class EfficientLiftControllerTest extends TestCase
             new Person('Demarcus', 2, 0),
         ];
 
-        $lift = $this->getMockForAbstractClass(Lift::class);
+        $lift = new Lift();
         $controller = new EfficientLiftController($lift);
 
         $controller->movePeople($people);
@@ -56,7 +56,7 @@ class EfficientLiftControllerTest extends TestCase
             new Person('Gino', 7, 6),
         ];
 
-        $lift = $this->getMockForAbstractClass(Lift::class);
+        $lift = new Lift();
         $controller = new EfficientLiftController($lift);
 
         $controller->movePeople($people);

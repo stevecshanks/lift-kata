@@ -22,7 +22,7 @@ class SimpleLiftControllerTest extends TestCase
             new Person('Rowena', 2, 0),
         ];
 
-        $controller = new SimpleLiftController($this->getMockForAbstractClass(Lift::class));
+        $controller = new SimpleLiftController(new Lift());
         $controller->movePeople($people);
 
         $this->assertPeopleHaveArrivedAtTheirDestinations($people);

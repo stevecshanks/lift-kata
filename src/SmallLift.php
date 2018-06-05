@@ -34,12 +34,4 @@ class SmallLift extends Lift
         }
         parent::addPassenger($person);
     }
-
-    /**
-     * @param Person[] $people
-     */
-    public function movePeople(array $people)
-    {
-        // TODO: Implement movePeople() method.
-    }
 }

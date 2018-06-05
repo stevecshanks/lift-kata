@@ -4,7 +4,7 @@ namespace PODKata;
 
 use InvalidArgumentException;
 
-abstract class Lift
+class Lift
 {
     /** @var int */
     private $currentFloor;
@@ -107,9 +107,4 @@ abstract class Lift
     {
         return count($this->floorsVisited);
     }
-
-    /**
-     * @param Person[] $people
-     */
-    abstract public function movePeople(array $people);
 }

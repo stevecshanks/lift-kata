@@ -13,7 +13,7 @@ class LiftTest extends TestCase
     {
         $this->setExpectedException(InvalidArgumentException::class);
 
-        $lift = $this->getMockForAbstractClass(Lift::class);
+        $lift = new Lift();
         $person = new Person('Test', 0, 0);
 
         $lift->addPassenger($person);
@@ -24,7 +24,7 @@ class LiftTest extends TestCase
     {
         $this->setExpectedException(InvalidArgumentException::class);
 
-        $lift = $this->getMockForAbstractClass(Lift::class);
+        $lift = new Lift();
         $person = new Person('Test', 99, 0);
 
         $lift->addPassenger($person);
@@ -34,7 +34,7 @@ class LiftTest extends TestCase
     {
         $this->setExpectedException(InvalidArgumentException::class);
 
-        $lift = $this->getMockForAbstractClass(Lift::class);
+        $lift = new Lift();
         $person = new Person('Test', 0, 0);
 
         $lift->removePassenger($person);
@@ -42,7 +42,7 @@ class LiftTest extends TestCase
 
     public function testPersonIsOnDifferentFloorWhenLeavingLiftAfterItHasMoved()
     {
-        $lift = $this->getMockForAbstractClass(Lift::class);
+        $lift = new Lift();
         $person = new Person('Test', 0, 0);
 
         $lift->addPassenger($person);
@@ -54,7 +54,7 @@ class LiftTest extends TestCase
 
     public function testNumberOfPassengersInLiftIsCorrect()
     {
-        $lift = $this->getMockForAbstractClass(Lift::class);
+        $lift = new Lift();
 
         $person1 = new Person('Test', 0, 0);
         $person2 = new Person('Test', 0, 0);
@@ -68,7 +68,7 @@ class LiftTest extends TestCase
 
     public function testVisitsToFloorsAreRecordedCorrectly()
     {
-        $lift = $this->getMockForAbstractClass(Lift::class);
+        $lift = new Lift();
 
         $lift->moveTo(1);
         $lift->moveTo(2);
@@ -82,7 +82,7 @@ class LiftTest extends TestCase
 
     public function testTotalNumberOfVisitsIsRecordedCorrectly()
     {
-        $lift = $this->getMockForAbstractClass(Lift::class);
+        $lift = new Lift();
 
         $lift->moveTo(1);
         $lift->moveTo(2);
