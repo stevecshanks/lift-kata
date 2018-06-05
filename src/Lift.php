@@ -46,10 +46,10 @@ abstract class Lift
     public function addPassenger(Person $person)
     {
         if (array_search($person, $this->passengers, true) !== false) {
-            throw new InvalidArgumentException('Person is already in lift');
+            throw new InvalidArgumentException("{$person->getName()} is already in lift");
         }
         if ($this->getCurrentFloor() !== $person->getCurrentFloor()) {
-            throw new InvalidArgumentException('Person is on a different floor');
+            throw new InvalidArgumentException("{$person->getName()} is on a different floor");
         }
         $this->passengers[] = $person;
     }
@@ -61,7 +61,7 @@ abstract class Lift
     {
         $position = array_search($person, $this->passengers, true);
         if ($position === false) {
-            throw new InvalidArgumentException('Person is not in lift');
+            throw new InvalidArgumentException("{$person->getName()} is not in lift");
         }
         unset($this->passengers[$position]);
 
