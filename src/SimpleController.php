@@ -2,16 +2,16 @@
 
 namespace PODKata;
 
-class SmallLiftController
+class SimpleController
 {
-    /** @var SmallLift */
+    /** @var Lift */
     protected $lift;
 
     /**
      * SimpleLiftController constructor.
-     * @param SmallLift $lift
+     * @param Lift $lift
      */
-    public function __construct(SmallLift $lift)
+    public function __construct(Lift $lift)
     {
         $this->lift = $lift;
     }

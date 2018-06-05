@@ -34,25 +34,25 @@ In this example we have:
 
 The lift starts on Floor 0, and you can assume it's big enough to carry everyone at once.
 
-We've already defined a `SimpleLiftController` class with a `movePeople` method that takes in the list of people:
+We've already defined a `SimpleController` class with a `movePeople` method that takes in the list of people:
 
 ```php
 $lift = new Lift();
-$controller = new SimpleLiftController($lift);
+$controller = new SimpleController($lift);
 $controller->movePeople($people);
 ```
 
 You just need to fill in the method body.  You can move the lift to a floor by using `$this->lift->moveTo($floor)`, and get someone to enter/exit the lift by using `$this->lift->addPassenger($person)` and `$this->lift->removePassenger($person)` respectively.
 
-You can remove `$this->markTestIncomplete()` from `SimpleLiftControllerTest`, which will let you test your solution.  Feel free to add tests of your own!
+You can remove `$this->markTestIncomplete()` from `SimpleControllerTest`, which will let you test your solution.  Feel free to add tests of your own!
 
 ## Goal #2
 
 The new lift is working out great, but the landlord isn't happy about the amount of power we're using.  Can we improve our lift algorithm so that we only visit each floor a maximum of 2 times?
 
-Fill out the `movePeople` method of `EfficientLiftController` this time.
+Fill out the `movePeople` method of `EfficientController` this time.
 
-You can remove `$this->markTestIncomplete()` from `EfficientLiftControllerTest` to test your solution.  Again, feel free to add tests of your own!
+You can remove `$this->markTestIncomplete()` from `EfficientControllerTest` to test your solution.  Again, feel free to add tests of your own!
 
 ## Goal #3
 
@@ -62,10 +62,10 @@ The `SmallLift` class takes the maximum number of people as a constructor argume
 
 ```php
 $lift = new SmallLift(4);
-$controller = new SmallLiftController($lift);
+$controller = new SmallController($lift);
 $controller->movePeople($people);
 ```
 
-Can you come up with a `movePeople` method for `SmallLiftController` that takes the maximum capacity into account?
+Can you come up with a `movePeople` method for `SmallController` that takes the maximum capacity into account?
 
-You can get the total number of visits using the `getTotalNumberOfVisits` method.  `SmallLiftControllerTest` has a few examples - how small can you get the total number of visits?
+You can get the total number of visits using the `getTotalNumberOfVisits` method.  `SmallControllerTest` has a few examples - how small can you get the total number of visits?

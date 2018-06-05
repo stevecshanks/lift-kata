@@ -2,7 +2,7 @@
 
 namespace PODKata;
 
-class EfficientLiftController
+class EfficientController
 {
     /** @var Lift */
     protected $lift;

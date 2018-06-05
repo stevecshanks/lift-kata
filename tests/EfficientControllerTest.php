@@ -4,11 +4,11 @@ namespace PODKata\Tests;
 
 use PHPUnit\Framework\TestCase;
 use PODKata\EfficientLift;
-use PODKata\EfficientLiftController;
+use PODKata\EfficientController;
 use PODKata\Lift;
 use PODKata\Person;
 
-class EfficientLiftControllerTest extends TestCase
+class EfficientControllerTest extends TestCase
 {
     use LiftAssertions;
 
@@ -23,7 +23,7 @@ class EfficientLiftControllerTest extends TestCase
         ];
 
         $lift = new Lift();
-        $controller = new EfficientLiftController($lift);
+        $controller = new EfficientController($lift);
 
         $controller->movePeople($people);
 
@@ -57,7 +57,7 @@ class EfficientLiftControllerTest extends TestCase
         ];
 
         $lift = new Lift();
-        $controller = new EfficientLiftController($lift);
+        $controller = new EfficientController($lift);
 
         $controller->movePeople($people);
 

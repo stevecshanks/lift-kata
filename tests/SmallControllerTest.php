@@ -6,9 +6,9 @@ use LogicException;
 use PHPUnit\Framework\TestCase;
 use PODKata\Person;
 use PODKata\SmallLift;
-use PODKata\SmallLiftController;
+use PODKata\SmallController;
 
-class SmallLiftControllerTest extends TestCase
+class SmallControllerTest extends TestCase
 {
     use LiftAssertions;
 
@@ -23,7 +23,7 @@ class SmallLiftControllerTest extends TestCase
         ];
 
         $lift = new SmallLift(1);
-        $controller = new SmallLiftController($lift);
+        $controller = new SmallController($lift);
 
         $controller ->movePeople($people);
 
@@ -55,7 +55,7 @@ class SmallLiftControllerTest extends TestCase
         ];
 
         $lift = new SmallLift(3);
-        $controller = new SmallLiftController($lift);
+        $controller = new SmallController($lift);
 
         $controller ->movePeople($people);
 

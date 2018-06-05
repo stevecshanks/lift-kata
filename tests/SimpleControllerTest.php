@@ -6,9 +6,9 @@ use PHPUnit\Framework\TestCase;
 use PODKata\Lift;
 use PODKata\Person;
 use PODKata\SimpleLift;
-use PODKata\SimpleLiftController;
+use PODKata\SimpleController;
 
-class SimpleLiftControllerTest extends TestCase
+class SimpleControllerTest extends TestCase
 {
     use LiftAssertions;
 
@@ -22,7 +22,7 @@ class SimpleLiftControllerTest extends TestCase
             new Person('Rowena', 2, 0),
         ];
 
-        $controller = new SimpleLiftController(new Lift());
+        $controller = new SimpleController(new Lift());
         $controller->movePeople($people);
 
         $this->assertPeopleHaveArrivedAtTheirDestinations($people);
