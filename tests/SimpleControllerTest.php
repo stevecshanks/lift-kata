@@ -5,7 +5,6 @@ namespace PODKata\Tests;
 use PHPUnit\Framework\TestCase;
 use PODKata\Lift;
 use PODKata\Person;
-use PODKata\SimpleLift;
 use PODKata\SimpleController;
 
 class SimpleControllerTest extends TestCase
