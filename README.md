@@ -12,7 +12,7 @@ We want to replace the lift in the office with a shiny new lift we bought on eBa
 
 Make sure you have PHP and Composer installed on your machine.  Then clone this repo and run `composer install`.
 
-You should then be able to run `./vendor/bin/phpunit` and see the tests pass (although the ones that verify your solution will be marked incomplete).
+You should then be able to run `composer run test` and see the tests pass (although the ones that verify your solution will be marked incomplete).
 
 ## Goal #1
 
